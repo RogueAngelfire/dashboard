@@ -1,0 +1,25 @@
+//Abstract
+
+@import "abstract/_variables.scss";
+@import "abstract/_mixins.scss";
+
+//Base
+
+@import "base/_base.scss";
+@import "base/_typography.scss";
+
+
+//Layout
+
+@import "layout/_grid.scss";
+
+
+
+.registration {
+    border: 3px solid black;
+    padding: 8px;
+}
+
+
+
+  
