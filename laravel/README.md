@@ -290,6 +290,21 @@ Now go back to the browser for PhpMyadmin and click the refresh button and the t
 
 Laravel is now set up.
 
+# Additional terminal commands notes:
+
+Don't forget to type:
+npm run build
+
+Running local host perfomred better this way.
+php artisan serve
+
+When building additional database migrations
+php artisan make:migration create_filename_tab
+
+after adding required information migrate with:
+php artisan migrate
+
+
 ## Set up for Mac OS
 
 Open up the terminal or iTerm if installed on the search bar (I prefer mine pinned to the bar).

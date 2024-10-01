@@ -11,6 +11,36 @@
 <body>
     <h1>Home</h1>
 
+    @auth
+    <p>You are currently logged in.</p>
+    <form action="/logout" method="POST">
+        @csrf
+        <button>Log Out</button>
+    </form>
+
+    <div class="registration">
+        <h2>Create a New Post</h2>
+        <form action="/create-post" method="POST">
+        @csrf
+        <input type="text" name="title" placeholder="post title">
+        <textarea name="body" placeholder="body content..."></textarea>
+        <button>Save Post</button>
+        </form>
+    </div>
+
+
+    <!-- class="blogbox" id="blogbox"  revoved as css and sass not updating -->
+    <div style="background-color: gray!important; padding: 10px; margin: 10px; ">
+        <h2>All Posts</h2>
+        @foreach($posts as $post)
+        <div>
+            <h3>{{$post['title']}}</h3>
+            {{$post['body']}}
+        </div>
+        @endforeach
+    </div>
+
+    @else
     <div class="registration">
         <h2>Register</h2>
         <form action="/register" method="POST">
@@ -21,6 +51,22 @@
             <button>Register</button>
         </form>
     </div>
+
+    <div class="registration">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            @csrf
+            <input name="loginname" type="text" placeholder="name">
+            <input name="loginpassword" type="password" placeholder="password">
+            <button>Log in</button>
+        </form>
+    </div>
+
+    @endauth
+
+    
+
+    
 
     <!-- <section class="gridttest">
             <div class="row">

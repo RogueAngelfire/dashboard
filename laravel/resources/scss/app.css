@@ -1,0 +1,114 @@
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 30%;
+  }
+}
+@media only screen and (max-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+}
+@media only screen and (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+h1 {
+  color: rgb(233, 91, 114);
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 56.25em) {
+  .row {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .row {
+    margin-bottom: 6rem;
+  }
+}
+
+.col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+  float: left;
+  text-align: center;
+}
+.col-1-of-2:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+
+.col-2-of-3 {
+  width: calc(2 * (100% - 2 * 6rem) / 3 + 6rem);
+}
+
+.col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+
+.col-2-of-4 {
+  width: calc(2 * (100% - 3 * 6rem) / 4 + 6rem);
+}
+
+.col-3-of-4 {
+  width: calc(3 * (100% - 3 * 6rem) / 4 + 2 * 6rem);
+}
+
+/* MEDIA QUERIES MANAGER
+
+  0 - 600px: phone screen
+  600 - 900px Tablet portrait
+  900 -1200px Tablet landscape
+  1200 - 1800 is where our normal styles apply.
+  1800 + : Big Desktop
+
+  ORDER: Base + typography > general layout + grid > page layout > components
+
+ BREAK POINT ARGUMENT CHOICES
+ - phone
+ - tab-port
+ - tab-land
+ - big-desktop
+
+  1em = 16px
+*/
+.registration {
+  border: 3px solid black;
+  padding: 8px;
+}
+
+.blogbox {
+  background-color: grey;
+  padding: 1rem;
+  margin: 1rem;
+}/*# sourceMappingURL=app.css.map */
