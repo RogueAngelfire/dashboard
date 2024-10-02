@@ -30,12 +30,18 @@
 
 
     <!-- class="blogbox" id="blogbox"  revoved as css and sass not updating -->
-    <div style="background-color: gray!important; padding: 10px; margin: 10px; ">
+    <div style="border: 3px solid black; padding: 8px;">
         <h2>All Posts</h2>
         @foreach($posts as $post)
-        <div>
-            <h3>{{$post['title']}}</h3>
+        <div style="background-color: gray!important; padding: 10px; margin: 10px; ">
+            <h3>{{$post['title']}} by {{$post->user->name}}</h3>
             {{$post['body']}}
+            <p><a href="/edit-post/{{$post->id}}">Edit</a></p>
+            <form href="/delete-post/{{$post->id}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button>Delete</button>
+            </form>
         </div>
         @endforeach
     </div>
